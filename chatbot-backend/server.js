@@ -275,6 +275,35 @@ app.post('/api/chat', async (req, res) => {
     }
 });
 
+// Testimonials endpoint
+app.get('/api/testimonials/get-testimonials', (req, res) => {
+    res.json({
+        testimonials: [
+            {
+                id: 1,
+                name: "John Smith",
+                rating: 5,
+                comment: "Excellent service! The team was professional and efficient.",
+                date: "2024-11-15"
+            },
+            {
+                id: 2,
+                name: "Sarah Johnson",
+                rating: 5,
+                comment: "Very satisfied with the tree removal service. Highly recommend!",
+                date: "2024-11-10"
+            },
+            {
+                id: 3,
+                name: "Mike Williams",
+                rating: 5,
+                comment: "Great work on trimming our trees. They look fantastic!",
+                date: "2024-11-05"
+            }
+        ]
+    });
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
     res.json({
