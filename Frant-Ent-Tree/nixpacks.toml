@@ -1,8 +1,9 @@
 [phases.setup]
 nixPkgs = ["nginx"]
+cmds = ["mkdir -p /etc/nginx/ /var/log/nginx/ /var/cache/nginx/"]
+
+[phases.build]
+# No build phase needed for static files
 
 [start]
 cmd = "nginx -c /assets/nginx.conf"
-
-[staticAssets]
-outputDir = "."
